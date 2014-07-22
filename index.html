@@ -1,7 +1,105 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="yui3-js-enabled" style="" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+	
+		<link rel="stylesheet" href="css/web-global.css" media="screen"/>
+		<link rel="stylesheet" href="css/main-page.css" media="screen"/>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/multiple-select.css" />
+	    <script src="controller/jquery.js"></script>
+		<script src="controller/mainController.js"></script>
+		<script src="controller/uncompressed.jquery.dd.js"></script>
+		<script src="js/jquery.multiple.select.js"></script>
+		
+			<script>
+				$(document).ready(function(){
+				var controllerObj = new controller();
+				
+				controllerObj.initiateSequence();
+			});
+			</script>
+	</head>
+	<body style="margin:0px;">
+		<!-- mainpage starts -->
+		<div class="wrapper padding-20">
+		
+			<div class="left-nav">
+				<ul>
+					<li>
+						<a href="#" id="dropdown">Dropdowns</a>
+					</li>
+					<li>
+						<a href="#" id="breadcrumb">Breadcrumbs</a>
+					</li>
+					<li>
+						<a href="#" id="main-header">Main Header</a>
+					</li>
+					<li>
+						<a href="#" id="pagination">Pagination</a>
+					</li>
+					<li>
+						<a href="#" id="popup">Popup</a>
+					</li>
+					<li>
+						<a href="#" id="search-bar">Search</a>
+					</li>
+					<li>
+						<a href="#" id="sub-navigation">Sub Navigation</a>
+					</li>
+					<li>
+						<a href="#" id="table-data">Table Data</a>
+					</li>
+					<li>
+						<a href="#" id="task-progress-block">Progress Blocks</a>
+					</li>
+					<li>
+						<a href="#" id="two-colomn-layout">Two colomn Layout</a>
+					</li>
+					<li>
+						<a href="#" id="vertical-nav">Vertical Navigation</a>
+					</li>
+				
+				</ul>
+			
+			</div>
+			<div class="display-div">
+				<div class="output-div clearfix">
+				
+				<h3 class="label">PATTERN</h3>
+				
+					<div id="display-div-worker" class="output-display">
+					
+						&nbsp;
+					
+					</div>
+				</div>
+			</div>
+				<div class="code-div-wrapper clearfix">
+				
+					<div class="html-code-display">
+						<h3 class="label">HTML</h3>
+						<pre id="code-div-worker" class="output-display1">
+						
+								&nbsp;
+						
+						</pre>
+					</div>
+					
+					<div class="CSS-display">
+						<h3 class="label">CSS</h3>
+						<pre id="CSS-display-worker" class="output-display1">
+					
+							&nbsp;
+					
+						</pre>
+					
+					</div>
+				
+				</div>
+			
+			
+		</div>
+		<!-- mainpage ends -->
+	</body>
+	
 </html>

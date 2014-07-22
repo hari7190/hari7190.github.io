@@ -1,0 +1,280 @@
+
+.dd {
+    background-color: #FFFFFF;
+    position: relative;
+    text-align: left;
+}
+.dd .ddTitle {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #D4D4D4;
+    cursor: pointer;
+    height: 16px;
+    overflow: hidden;
+    padding: 3px;
+    text-indent: 0;
+}
+.dd .ddTitle span.arrow {
+    background: url("images/drop-down-arrow.png") no-repeat scroll 0 0 transparent;
+    border-right: 1px solid #D4D4D4;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    height: 16px;
+    width: 16px;
+}
+.dd .ddTitle span.ddTitleText {
+    line-height: 16px;
+    overflow: hidden;
+    text-indent: 1px;
+}
+.dd .ddTitle span.ddTitleText img {
+    padding: 0 2px 0 0;
+    text-align: left;
+}
+.dd .ddTitle img.selected {
+    padding: 0 3px 0 0;
+    vertical-align: top;
+}
+.dd .ddChild {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FFFFFF;
+    border-color: -moz-use-text-color #C3C3C3 #C3C3C3;
+    border-image: none;
+    border-right: 1px solid #C3C3C3;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    display: none;
+    height: auto;
+    margin: 0;
+    overflow-x: hidden !important;
+    overflow-y: auto;
+    position: absolute;
+    width: auto;
+}
+.dd .ddChild .opta a, .dd .ddChild .opta a:visited {
+    padding-left: 10px;
+}
+.dd .ddChild a {
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    padding: 2px 0 2px 3px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.dd .ddChild a:hover {
+    background-color: #66CCFF;
+}
+.dd .ddChild a img {
+    border: 0 none;
+    padding: 0 2px 0 0;
+    vertical-align: middle;
+}
+.dd .ddChild a.selected {
+    background-color: #66CCFF;
+}
+.hidden {
+    display: none;
+}
+.dd .borderTop {
+    border-top: 1px solid #C3C3C3 !important;
+}
+.dd .noBorderTop {
+    border-top: 0 none !important;
+}
+.dd2 {
+    background-color: #FFFFFF;
+    float: left;
+    position: relative;
+    text-align: left;
+    width: 258px;
+}
+.leftcontent .dd2 {
+    left: 0;
+}
+.dd2 .ddTitle {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #D4D4D4;
+    border-radius: 3px 3px 3px 3px;
+    cursor: default;
+    height: 34px;
+    overflow: hidden;
+    padding: 0 0 0 8px;
+    text-indent: 0;
+}
+.dd2 .ddTitle span.arrow {
+    background: url("../images/dropdown-arrow.png") no-repeat scroll center center !important;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    height: 35px;
+    position: relative;
+    width: 28px;
+	border-left:1px solid #c8c8c8;
+}
+.dd2 .ddTitle span, .dd2 .ddChild a span {
+    font-weight: normal;
+    left: 0;
+    padding: 0;
+}
+.dd2 .ddTitle span.ddTitleText {
+    color: #000000;
+    line-height: 35px;
+    overflow: visible;
+    text-indent: 1px;
+    white-space: nowrap;
+}
+.dd2 .ddTitle span.ddTitleText img {
+    padding: 0 2px 0 0;
+    text-align: left;
+}
+.dd2 .ddTitle img.selected {
+    padding: 0 2px 0 0;
+    vertical-align: top;
+}
+.dd2 .ddChild {
+    background-color: #FFFFFF;
+    border-image: none;
+	border:1px solid #c3c3c3;
+    display: none;
+    font-size: 14px;
+	border-radius:0 0 4px 4px;
+    margin: 0;
+    overflow-x: hidden !important;
+    overflow-y: auto;
+    position: absolute;
+    width: auto;
+	box-shadow:0px 2px 5px -2px;
+}
+.dd2 .ddChild .opta a, .dd2 .ddChild .opta a:visited {
+    padding-left: 10px;
+}
+.dd2 .ddChild a {
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    padding: 5px 0 5px 5px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.dd2 .ddChild a:hover {
+    background-color: #ABABAB;
+}
+.dd2 .ddChild a img {
+    border: 0 none;
+    padding: 0 2px 0 0;
+    vertical-align: middle;
+}
+.dd2 .ddChild a.selected {
+    background-color: #3497CA;
+    color: #FFFFFF;
+}
+.dd2 .borderTop {
+    border-top: 1px solid #C3C3C3 !important;
+}
+.dd2 .noBorderTop {
+    border-top: 0 none !important;
+}
+.drop-down-label{
+font-weight:bold;
+margin-top:10px;
+float:left;
+margin-right:10px;
+}
+.popup-drop-down-wrapper .dd2 .ddTitle span.arrow{
+
+    background: url("../images/drop-arrow.png") no-repeat scroll center center transparent !important;
+    border-left: medium none;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    height: 35px;
+    margin-right: -1px;
+    position: relative;
+    width: 28px;
+	margin-top: -1px;
+
+}
+/* add-wrapper-div starts */
+
+
+/* .add-wrapper-div{
+position:relative;
+} */
+.add-wrapper-list {
+ background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #D4D4D4;
+    border-left: 1px solid #D4D4D4;
+    border-radius: 0 0 4px 4px;
+    border-right: 1px solid #D4D4D4;
+    box-shadow: 0 2px 5px 1px;
+    margin-top: 0px;
+    max-width: 250px;
+    position: absolute;
+    right: 0;
+    min-width: 180px;
+    z-index: 200;
+	
+}
+
+ul.add-wrapper-list li,ul.add-wrapper-list li.hdr-block,ul.sublist-hdr  li {
+    cursor: pointer;
+    padding: 8px 15px;
+	border-bottom:1px solid #c8c8c8;
+	word-wrap: break-word;
+}
+ul.sublist  li {
+border-bottom:none;
+
+}
+ul.add-wrapper-list li.hdr-block,ul.add-wrapper-list li.hdr-block:hover{
+	cursor: default;
+	background:#f1f1f1;
+	color:#2e86bf;
+
+}
+ul.add-wrapper-list li.sublist-hdr{
+	cursor: default;
+	color:#2e86bf;
+	padding-left:0px;
+	padding-right:0px;
+	padding-bottom:0px;
+}
+ul.add-wrapper-list li.sublist-hdr span{
+margin-left:15px;
+}
+ul.sublist li span{
+margin-left:25px;
+}
+ul.sublist li:hover span{
+color:#fff !important;
+}
+ul li.sublist-hdr:hover{
+background:#fff !important;
+ color:#2e86bf !important;
+}
+ul li.sublist-hdr ul.sublist li{
+color:#404040 !important;
+}
+ul.add-wrapper-list li:hover{
+background:#3497ca;
+color:#fff;
+}
+
+.add-wrapper-arrow{
+	 background: url("../images/arrow-grey.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 10px;
+    position: relative;
+    right: -30px;
+    top: 1px;
+    width: 18px;
+    z-index: 201;
+}
+
+/* add-wrapper-div ends */

@@ -1,0 +1,72 @@
+/*  
+Theme Name : Remedy
+CSS Version : CSS 3.0
+Layout : sub-navigation
+Theme Author : Subhashini Kamath
+CSS Template Designed by : Razor Think
+*/
+
+/* sub-navigation starts */
+.sub-page-navigation {
+    border-bottom: 1px solid #C8C8C8;
+    border-top: 1px solid #C8C8C8;
+    height: 35px;
+    padding: 10px 20px;
+   /*  position: fixed; need while implementing */
+    width: 943px;
+    z-index: 7000;
+	background: none repeat scroll 0 0 #F0F0F0;
+}
+
+a.notes, a.email, a.close-task {
+    background: url("../images/chat.png") no-repeat scroll left center transparent;
+    border-right: 1px solid #B3B3B3;
+    margin-top: 5px;
+    padding: 5px 10px 5px 25px;
+    position: relative;
+	color: #404040;
+}
+
+.notes-count {
+    font-size: 10px;
+    left: 2px;
+    position: absolute;
+    text-align: center;
+    top: 4px;
+    width: 15px;
+}
+
+a.email {
+    background: url("../images/email.png") no-repeat scroll 0 1px transparent;
+}
+a.close-task {
+    background: url("../images/cross.png") no-repeat scroll 5px center transparent;
+}
+.next-move-arrow-green {
+    background: url("../images/btn-green-right.png") no-repeat scroll right top transparent;
+}
+.next-move-arrow, .next-move-arrow-green, .next-move-arrow-deactive {
+    background: url("../images/btn-grey-right.png") no-repeat scroll right top transparent;
+    height: 32px;
+    padding-right: 26px;
+    text-decoration: none;
+}
+.next-move-txt-green {
+    background: none repeat scroll 0 0 #16A517;
+    border: medium none #16A517;
+    border-radius: 4px 0 0 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    line-height: 14px;
+    padding: 9px 20px;
+}
+.next-move-txt, .next-move-txt-deactive, .prev-move-txt-deactive {
+    background: url("../images/btn-grey-centre1.png") repeat scroll left top transparent;
+    color: #7C7C7C;
+    cursor: pointer;
+    float: left;
+    padding: 8px 9px 8px 20px;
+}
+
+/* sub-navigation ends */

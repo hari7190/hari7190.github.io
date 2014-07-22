@@ -1,0 +1,67 @@
+/*  
+Theme Name : Remedy
+CSS Version : CSS 3.0
+Layout : search
+Theme Author : Subhashini Kamath
+CSS Template Designed by : Razor Think
+*/
+
+/* search starts */
+.search-label{
+margin-top:8px;
+}
+.attribute-search {
+    border: 1px solid #D4D4D4;
+    border-radius: 3px 3px 3px 3px;
+    padding: 1px;
+}
+.attribute-search input {
+    
+    border-radius: 0 0 0 0 !important;
+    border: none !important;
+	height: 20px;
+    padding: 5px !important;
+    width: 215px;
+}
+.search-drop-wrapper {
+    position: relative;
+	cursor:pointer;
+	border-left:1px solid #c8c8c8;
+}
+.attribute-dropdown {
+   background: url("../images/dropdown-arrow.png") no-repeat scroll right center transparent;
+    height: 22px;
+    margin-right: 3px;
+    min-width: 50px;
+    padding-left: 5px;
+    padding-right: 23px;
+    padding-top: 8px;
+}
+ul.select-attrib-list {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #D4D4D4;
+    border-left: 1px solid #D4D4D4;
+    border-radius: 0 0 4px 4px;
+    border-right: 1px solid #D4D4D4;
+    box-shadow: 0 2px 5px 1px;
+    left: 0;
+    position: absolute;
+    top: 34px;
+    width: 100%;
+    z-index: 200;
+}
+
+ul.select-attrib-list li {
+    cursor: pointer;
+    padding: 8px 10px;
+}
+.search-btn {
+    background: url("../images/search-icon.png") no-repeat scroll 11px center #605D58;
+    border-radius: 0 4px 4px 0;
+    color: #FFFFFF;
+    left: 3px;
+    padding: 8px 10px 9px 35px;
+    position: relative;
+    top: 6px;
+}
+/* search ends */

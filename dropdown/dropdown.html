@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="yui3-js-enabled" style="" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<link rel="stylesheet" href="css/dropdown.css" media="screen"/>
+<link rel="stylesheet" href="../css/web-global.css" media="screen"/>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/multiple-select.css" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.multiple.select.js"></script>
+
+
+<script src="js/uncompressed.jquery.dd.js"></script>
+<script type="text/javascript" src="js/dropdown.js"></script>
+
+<script src="js/custom.js"></script>
+</head>
+<body>
+<!-- dropdown starts -->
+<div class="drop-down-wrapper clearfix margin-bottom-20">
+	<span class="drop-down-label">Regular dropdown:</span>
+	<select class="dd" style="width:200px;">
+		<option>dummy text goes here</option>
+		<option>Option value 1</option>
+		<option>Option value 2</option>
+	</select>
+</div>
+<!-- dropdown ends -->
+<!-- popup-dropdown starts -->
+<div class="popup-drop-down-wrapper clearfix margin-top-20">
+	<span class="drop-down-label">Popup dropdown:</span>
+	<select class="dd" style="width:400px;">
+		<option>dummy text goes herevbghghjghjg</option>
+		<option>Option value 1</option>
+		<option>Option value 2</option>
+	</select>
+</div>
+<!-- popup-dropdown ends -->
+<!-- dropdown with checkbox starts -->
+	<div class="margin-top-20">
+    <div class="form-group">
+        <span class="input-label display-inline margin-right-10 bold">Title:</span>
+        <select id="ms" multiple="multiple" class="form-control">
+            <option value="1">Dropdown Selection 01</option>
+            <option value="2">Dropdown Selection 02</option>
+            <option value="3">Dropdown Selection 03</option>
+            <option value="4">Dropdown Selection 04</option>
+            <option value="5">Dropdown Selection 05</option>
+            <option value="6">Dropdown Selection 06</option>
+            <option value="7">Dropdown Selection 07</option>
+            <option value="8">Dropdown Selection 08</option>
+            <option value="9">Dropdown Selection 09</option>
+            <option value="10">Dropdown Selection 10</option>
+            <option value="10">Dropdown Selection 11 with big text which wraps</option>
+          
+           
+        </select>
+    </div>
+</div>
+
+<!-- dropdown with checkbox ends -->
+<!-- add new button starts -->
+		<div class="clearfix margin-top-20" >
+				<a class="link-btn hdr-btn fleft add-case" href="#">
+				<span class=" incident">+ Add New </span>
+				</a>
+				<div class="add-wrapper-div clearfix" style="height: 35px; display:none;">
+					<span class="add-wrapper-arrow"></span>
+					<ul class="add-wrapper-list" style="right:auto;">
+						<li class="hdr-block bold"> Cases</li>
+						<li > AI Process Test</li>
+						<li >BBP Test</li>
+						<li class="simple-case">Simple</li>
+						<li class="sublist-hdr "><span class=" bold clearfix" style="margin-bottom:8px;">Evaluations</span>
+							<ul class="sublist">
+								<li class=""><span class="clearfix"> Full Evaluation </span></li>
+								<li class=""><span class="clearfix"> Walk By Evaluation</span></li>
+								<li class=""><span class="clearfix">Rapid Response</span></li>
+							</ul>
+						</li>
+						<li class="hdr-block bold"> Incident</li>
+						<li > Incidents</li>
+						<li class="hdr-block bold"> Simple Cases/Tasks</li>
+						<li > Simple Cases/Tasks</li>
+					</ul>
+				</div>
+			</div>
+
+<!-- add new button ends -->
+<!-- process btn dropdown starts -->
+	<a class="fleft clearfix next-move-arrow-green margin-top-20" href="javascript:void(0);">  
+		<span class="next-move-txt-green fright bold font-12">Select</span>
+			<ul class="button-drop-list"  style="display: none;" >
+				<li> Step2 to Step1</li>
+				<li> Step2 to Open</li>
+			</ul>
+			<span class="white-drop" style="left:0px;"></span>
+
+	</a>
+<!-- process btn dropdown ends -->
+
+
+<script>
+var drop_down_selected = 0;
+</script>
+<script>
+    $(function() {
+        $('#ms').change(function() {
+            console.log($(this).val());
+        }).multipleSelect();
+    });
+</script>
+</body>
+</html>
