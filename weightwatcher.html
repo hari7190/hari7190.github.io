@@ -8,8 +8,8 @@ google.charts.setOnLoadCallback(drawBasic);
 function drawBasic() {
 
       var data = new google.visualization.DataTable();
-      data.addColumn('number', 'X');
-      data.addColumn('number', 'Dogs');
+      data.addColumn('number', 'day');
+      data.addColumn('number', 'weight');
 
       data.addRows([
         [0, 25],   [1, 10],  [2, 23],  [3, 17],  [4, 18],  [5, 9],
@@ -28,10 +28,10 @@ function drawBasic() {
 
       var options = {
         hAxis: {
-          title: 'Time'
+          title: 'Days'
         },
         vAxis: {
-          title: 'Popularity'
+          title: 'Weight'
         }
       };
 
