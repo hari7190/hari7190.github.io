@@ -1,0 +1,31 @@
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <div id="chart_div"></div>
+  
+  <script>
+  google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawBasic);
+
+function drawBasic() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'day');
+      data.addColumn('number', 'weight');
+
+      data.addRows([
+        [0, 79.6]
+      ]);
+
+      var options = {
+        hAxis: {
+          title: 'Days'
+        },
+        vAxis: {
+          title: 'Weight'
+        }
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+    }
+  </script>
