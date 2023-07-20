@@ -1,17 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-14T00:26:10-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hari Muraleedharan</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2023/07/14/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2023-07-14T00:09:59-04:00</published><updated>2023-07-14T00:09:59-04:00</updated><id>http://localhost:4000/jekyll/update/2023/07/14/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2023/07/14/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-19T23:56:01-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hari Muraleedharan</title><subtitle></subtitle><entry><title type="html">ColdFusion apps into J2EE containers</title><link href="http://localhost:4000/coldfusion/deployment/2023/07/14/coldfusion-deployment.html" rel="alternate" type="text/html" title="ColdFusion apps into J2EE containers" /><published>2023-07-14T00:09:59-04:00</published><updated>2023-07-14T00:09:59-04:00</updated><id>http://localhost:4000/coldfusion/deployment/2023/07/14/coldfusion-deployment</id><content type="html" xml:base="http://localhost:4000/coldfusion/deployment/2023/07/14/coldfusion-deployment.html"><![CDATA[<p>ColdFusion can be deployed to a Tomcat or JBoss kind of web servers</p>
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+<p>Overview
+ColdFusion application server can be of two types, Enterprise and Standard. And it can be deployed in three forms. As a J2EE instance or as a Standalone. In this article we are looking at the steps for deploying it as a J2EE instance AKA like a Java application.</p>
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<p>Steps
+Download Apache Tomcat server.
+Download ColdFusion Application server from Adobe.com. You can get a developer licensed version but might need an account (free) to download.
+Start the CF installer and go ahead with steps until it asks you about the configuration. At that point you should select J2EE and then the WAR configuration.
+The output will be four folders.
+CFIDE
+cf_scripts
+WEB-INF
+META-INF (I almost always ignore this one though)
+Unzip and setup Tomcat. Usually unzipping and running start script from bin folder should bring it up. So make sure it is reachable via the browser window.
+Stop Tomcat.
+Open server.xml file from config folder and add this line inside host tag.</p>
+<Context docBase="path/to/docroot" path="contextpath" debug="0" reloadable="true" allowLinking="true">/ </Context>
+<p>Copy all the CF folders mentioned in above steps (CFIDE, cf_scripts, WEB-INF) into the root of your project folder
+                    projectFolder
+                        CFIDE
+                        cf_scripts
+                        WEB-INF
+                        ..other folders</p>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p>Start Tomcat and tail the catalina logs to see your ColdFusion starting up. 
+Now you should be able to reach you app via</p>
+<protocol>://<domain>:<port>/<contextpath>
+ColdFusion Administrator will be at
+<protocol>://<domain>:<port>/<contextpath>/CFIDE/administrator/index.cfm
+ 
+</contextpath></port></domain></protocol></contextpath></port></domain></protocol>]]></content><author><name></name></author><category term="coldfusion" /><category term="deployment" /><summary type="html"><![CDATA[ColdFusion can be deployed to a Tomcat or JBoss kind of web servers]]></summary></entry><entry><title type="html">Voice Control For TV</title><link href="http://localhost:4000/api/2023/07/14/roku-tv-voice-control.html" rel="alternate" type="text/html" title="Voice Control For TV" /><published>2023-07-14T00:09:59-04:00</published><updated>2023-07-14T00:09:59-04:00</updated><id>http://localhost:4000/api/2023/07/14/roku-tv-voice-control</id><content type="html" xml:base="http://localhost:4000/api/2023/07/14/roku-tv-voice-control.html"><![CDATA[<p>[<img src="https://www.commitstrip.com/wp-content/uploads/2020/04/Strip-Covid19-5-650-finalenglish-1.jpg" alt="An old rock in the desert" title="Shiprock, New Mexico by Beau Rogers" />]</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<p>Check out <a href="https://www.commitstrip.com/en/2020/04/16/a-story-of-duplicate-code/">Commit Strip</a>. They’re awesome.<br />
+ </p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<p><strong>Overview</strong><br />
+This is a super simple implementation using Google speech APIs and a Roku TV. You can use any language. I am using Python today. My objective was to control my Roku TV. I actually tried capturing network traffic from my TV Remote App to TV to find the commands. An easier and better way to do is reading Roku documentation !! They explained it pretty well there.</p>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry></feed>
+<p><strong>Environment</strong></p>
+<ul>
+  <li>Create a environment of Python 3.6 with Anaconda.</li>
+  <li>Brew install Portaudio. (Security aspects TBD)</li>
+  <li>Then Pip install pyaudio.</li>
+  <li>Get speech_recognition and requests lib (if you are making requests that way)</li>
+</ul>
+
+<p><strong>Logic</strong></p>
+<ul>
+  <li>Setup variables for sampling rate, chunk size and mic name. I used following values.<br />
+ Sampling rate : 44100<br />
+ Chunk Size : 3096<br />
+ I was using built in mic so name was ‘Built-in Microphone’.<br />
+ You can find the name using either : system_profiler SPAudioDataType or
+system_profiler SPUSBDataType to find usb audio devices like dedicated mics.</li>
+  <li>Put out a console message indicating program is ready to listen.</li>
+  <li>Sample the input and use speech recognition library to reach out to Google to get it processed and convert that to text.</li>
+  <li>Pick up the resulting text and look for what you want in there. I looked for if starting with ‘roku’ and ending with one of the commands like ‘play’.</li>
+  <li>After this its pretty much basic if-else logic and logging. Then use requests library to make a http post call to TV according to text. It will be like<br />
+<code class="language-plaintext highlighter-rouge">$ curl -d '' http://192.168.XXX.X:8060/keypress/XXXXX  </code></li>
+</ul>
+
+<p><strong>Code</strong><br />
+<a href="https://github.com/hari7190/VoiceControlledRokuTv">GitHub Repo here. (Quick dirty code. Clean up TBD.)</a></p>
+
+<p><strong>Path forward</strong><br />
+Deploy this into a RaspberryPi.
+Make it offline. Now it uses Google Speech API. Since there are only a few commands, it should be easy to setup a model and teach it. Deploy that in one of the home servers for Pi to talk to.</p>]]></content><author><name></name></author><category term="api" /><summary type="html"><![CDATA[[]]]></summary></entry></feed>

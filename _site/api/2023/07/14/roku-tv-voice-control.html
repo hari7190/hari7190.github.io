@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Voice Control For TV | Hari Muraleedharan</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Voice Control For TV" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="[]" />
+<meta property="og:description" content="[]" />
+<link rel="canonical" href="http://localhost:4000/api/2023/07/14/roku-tv-voice-control.html" />
+<meta property="og:url" content="http://localhost:4000/api/2023/07/14/roku-tv-voice-control.html" />
+<meta property="og:site_name" content="Hari Muraleedharan" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-07-14T00:09:59-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Voice Control For TV" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-07-14T00:09:59-04:00","datePublished":"2023-07-14T00:09:59-04:00","description":"[]","headline":"Voice Control For TV","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/api/2023/07/14/roku-tv-voice-control.html"},"url":"http://localhost:4000/api/2023/07/14/roku-tv-voice-control.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Hari Muraleedharan" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Hari Muraleedharan</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Voice Control For TV</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-07-14T00:09:59-04:00" itemprop="datePublished">Jul 14, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>[<img src="https://www.commitstrip.com/wp-content/uploads/2020/04/Strip-Covid19-5-650-finalenglish-1.jpg" alt="An old rock in the desert" title="Shiprock, New Mexico by Beau Rogers" />]</p>
+
+<p>Check out <a href="https://www.commitstrip.com/en/2020/04/16/a-story-of-duplicate-code/">Commit Strip</a>. They’re awesome.<br />
+ </p>
+
+<p><strong>Overview</strong><br />
+This is a super simple implementation using Google speech APIs and a Roku TV. You can use any language. I am using Python today. My objective was to control my Roku TV. I actually tried capturing network traffic from my TV Remote App to TV to find the commands. An easier and better way to do is reading Roku documentation !! They explained it pretty well there.</p>
+
+<p><strong>Environment</strong></p>
+<ul>
+  <li>Create a environment of Python 3.6 with Anaconda.</li>
+  <li>Brew install Portaudio. (Security aspects TBD)</li>
+  <li>Then Pip install pyaudio.</li>
+  <li>Get speech_recognition and requests lib (if you are making requests that way)</li>
+</ul>
+
+<p><strong>Logic</strong></p>
+<ul>
+  <li>Setup variables for sampling rate, chunk size and mic name. I used following values.<br />
+ Sampling rate : 44100<br />
+ Chunk Size : 3096<br />
+ I was using built in mic so name was ‘Built-in Microphone’.<br />
+ You can find the name using either : system_profiler SPAudioDataType or
+system_profiler SPUSBDataType to find usb audio devices like dedicated mics.</li>
+  <li>Put out a console message indicating program is ready to listen.</li>
+  <li>Sample the input and use speech recognition library to reach out to Google to get it processed and convert that to text.</li>
+  <li>Pick up the resulting text and look for what you want in there. I looked for if starting with ‘roku’ and ending with one of the commands like ‘play’.</li>
+  <li>After this its pretty much basic if-else logic and logging. Then use requests library to make a http post call to TV according to text. It will be like<br />
+<code class="language-plaintext highlighter-rouge">$ curl -d '' http://192.168.XXX.X:8060/keypress/XXXXX  </code></li>
+</ul>
+
+<p><strong>Code</strong><br />
+<a href="https://github.com/hari7190/VoiceControlledRokuTv">GitHub Repo here. (Quick dirty code. Clean up TBD.)</a></p>
+
+<p><strong>Path forward</strong><br />
+Deploy this into a RaspberryPi.
+Make it offline. Now it uses Google Speech API. Since there are only a few commands, it should be easy to setup a model and teach it. Deploy that in one of the home servers for Pi to talk to.</p>
+
+  </div><a class="u-url" href="/api/2023/07/14/roku-tv-voice-control.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Hari Muraleedharan</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Hari Muraleedharan</li><li><a class="u-email" href="mailto:contact@hari.foo">contact@hari.foo</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/hari7190"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">hari7190</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
