@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Voice Control For TV"
-date:   2023-07-14 00:09:59 -0400
+date:   2023-07-14 00:09:57 -0400
 categories: api
 ---
 
